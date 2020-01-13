@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<block>
+  <name>evm_qam_py_cf</name>
+  <key>evm_evm_qam_py_cf</key>
+  <category>[evm]</category>
+  <import>import evm</import>
+  <make>evm.evm_qam_py_cf($modulation)</make>
+
+ <param>
+    <name>Modulation</name>
+    <key>modulation</key>
+    <type>int</type>
+  </param>
+
+ <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+	<doc>
+    Description:
+This block takes QAM modulations and estimates de EVM ofthe symbols received. 
+For QPSK -- modulation = 0
+For 16QAM -- modulation = 1
+For 64QAM -- modulation = 2
+For 256QAM -- modulation = 3
+  	</doc>
+</block>
